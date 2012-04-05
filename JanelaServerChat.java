@@ -29,7 +29,7 @@ public class JanelaServerChat extends JFrame {
 	public JTextField tfNome;
 	public JTextField tfAssunto;
 	public JTextArea taMsg;
-	//botıes
+	//bot√µes
 	public JButton btSend;
 	//checkbox
 	public JCheckBox chCloseConnection;
@@ -37,18 +37,18 @@ public class JanelaServerChat extends JFrame {
 	public JPanel pnNorth;
 	public JPanel pnSouth;
 	
-	public JanelaServerChat(){//mÈtodo construtor
+	public JanelaServerChat(){//m√©todo construtor
 		//configura JFrame
 		this.setBounds(0, 0, 600, 400);
-		this.setTitle("AplicaÁ„o Client2");
+		this.setTitle("Aplica√ß√£o Client2");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setLocationRelativeTo(null);  
 		//cria labels
 		lbNome = new JLabel("  Nome :");
 		lbAssunto = new JLabel("  Assunto:");
 		lbMsg = new JLabel("  Mensagem");	
-		lbMsgLog = new JLabel("Status de conex„o");
-		lbMsgLog.setEnabled(false);//desabilita pois È sÛ para leitura	
+		lbMsgLog = new JLabel("Status de conex√£o");
+		lbMsgLog.setEnabled(false);//desabilita pois √© s√≥ para leitura	
 		//cria componentes de entrada de texto
 		tfNome = new JTextField("", 28);
 		tfAssunto = new JTextField("",28);	
@@ -56,8 +56,8 @@ public class JanelaServerChat extends JFrame {
 		//cria checkbox
 		chCloseConnection = new JCheckBox();
 		chCloseConnection.setSelected(false);
-		chCloseConnection.setText("Fechar conex„o apÛs envio");	
-		//cria botıes
+		chCloseConnection.setText("Fechar conex√£o ap√≥s envio");	
+		//cria bot√µes
 		btSend = new JButton("Send");
 		btSend.setToolTipText("Enviar mensagem");
         //cria paineis		
@@ -117,7 +117,7 @@ public class JanelaServerChat extends JFrame {
 					        output.flush();
 					        output.writeObject(msg);
 					        output.flush();
-					        output.close();
+					        output.close(); /*teste de observa√ß√£o*/
 					        
 					        socketCliente.close();
                         }
